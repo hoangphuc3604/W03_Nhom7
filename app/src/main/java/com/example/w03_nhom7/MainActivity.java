@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                         new DatePickerDialog.OnDateSetListener() {
                             @Override
                             public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
-                                String birthdateEditStr = dayOfMonth + "/" + month + "/" + year;
+                                String birthdateEditStr = dayOfMonth + "/" + (month + 1) + "/" + year;
                                 birthdateEdit.setText(birthdateEditStr);
                             }
                         }, y, m, d);
