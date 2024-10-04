@@ -68,13 +68,13 @@ public class MainActivity extends AppCompatActivity {
                 int m = c.get(Calendar.MONTH);
                 int d = c.get(Calendar.DAY_OF_MONTH);
 
-                //Create a birthdateEdit picker with current birthdateEdit selectBirthdateBtned
+                //Create a DatePickerDialog picker with current date selected
                 DatePickerDialog datePickerDialog = new DatePickerDialog(
                         MainActivity.this,
                         //Listener/Callback after a birthdateEdit is chosen
                         new DatePickerDialog.OnDateSetListener() {
                             @Override
-                            public void onDateSet(DatePicker datePicker, int dayOfMonth, int month, int year) {
+                            public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
                                 String birthdateEditStr = dayOfMonth + "/" + month + "/" + year;
                                 birthdateEdit.setText(birthdateEditStr);
                             }

@@ -79,7 +79,6 @@
             android:layout_height="48dp"
             android:layout_weight="1"
             android:hint = "dd/mm/yy"
-            android:inputType="date"
             android:id="@+id/editBirthdate"
             />
         <Button
