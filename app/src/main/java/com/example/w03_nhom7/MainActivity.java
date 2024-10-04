@@ -1,65 +1,85 @@
 package com.example.w03_nhom7;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Calendar;
+
 public class MainActivity extends AppCompatActivity {
-    EditText username, password, retype, date;
-    RadioButton male, female;
-    RadioGroup gender;
-    CheckBox tennis, futbal, others;
-    Button reset, sign, select;
+    EditText usernameEdit, passwordEdit, retypeEdit, birthdateEdit;
+    RadioButton maleOption, femaleOption;
+    RadioGroup genderOptions;
+    CheckBox tennisCheck, futbalCheck, othersCheck;
+    Button resetButton, signUpButton, selectBirthdateButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
 
-        username = findViewById(R.id.editUsername);
-        password = findViewById(R.id.editPassword);
-        retype = findViewById(R.id.editRetype);
-        date = findViewById(R.id.editDate);
+        usernameEdit = findViewById(R.id.editUsername);
+        passwordEdit = findViewById(R.id.editPassword);
+        retypeEdit = findViewById(R.id.editRetype);
+        birthdateEdit = findViewById(R.id.editBirthdate);
 
-        gender = findViewById(R.id.gender);
-        male = findViewById(R.id.genderMale);
-        female = findViewById(R.id.genderFemale);
+        genderOptions = findViewById(R.id.optionsGender);
+        maleOption = findViewById(R.id.optionMale);
+        femaleOption = findViewById(R.id.optionFemale);
 
-        tennis = findViewById(R.id.checkTennis);
-        futbal = findViewById(R.id.checkFutbal);
-        others = findViewById(R.id.checkOthers);
+        tennisCheck = findViewById(R.id.checkTennis);
+        futbalCheck = findViewById(R.id.checkFutbal);
+        othersCheck = findViewById(R.id.checkOthers);
 
-        reset = findViewById(R.id.btnReset);
-        sign = findViewById(R.id.btnSign);
-        select = findViewById(R.id.btnSelect);
+        resetButton = findViewById(R.id.btnReset);
+        signUpButton = findViewById(R.id.btnSignUp);
+        selectBirthdateButton = findViewById(R.id.btnBirthdateSelect);
 
-        reset.setOnClickListener(new View.OnClickListener() {
+        resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                username.setText("");
-                password.setText("");
-                retype.setText("");
-                date.setText("");
+                usernameEdit.setText("");
+                passwordEdit.setText("");
+                retypeEdit.setText("");
+                birthdateEdit.setText("");
 
-                gender.clearCheck();
+                genderOptions.clearCheck();
 
-                tennis.setChecked(false);
-                futbal.setChecked(false);
-                others.setChecked(false);
+                tennisCheck.setChecked(false);
+                futbalCheck.setChecked(false);
+                othersCheck.setChecked(false);
             }
         });
 
-        select.setOnClickListener(new View.OnClickListener() {
+        selectBirthdateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DatePickerFragment newFragment = new DatePickerFragment();
-                newFragment.show(getSupportFragmentManager(), "datePicker");
+                //Get current birthdateEdit
+                final Calendar c = Calendar.getInstance();
+                int y = c.get(Calendar.YEAR);
+                int m = c.get(Calendar.MONTH);
+                int d = c.get(Calendar.DAY_OF_MONTH);
+
+                //Create a birthdateEdit picker with current birthdateEdit selectBirthdateBtned
+                DatePickerDialog datePickerDialog = new DatePickerDialog(
+                        MainActivity.this,
+                        //Listener/Callback after a birthdateEdit is chosen
+                        new DatePickerDialog.OnDateSetListener() {
+                            @Override
+                            public void onDateSet(DatePicker datePicker, int dayOfMonth, int month, int year) {
+                                String birthdateEditStr = dayOfMonth + "/" + month + "/" + year;
+                                birthdateEdit.setText(birthdateEditStr);
+                            }
+                        }, y, m, d);
+                datePickerDialog.show();
             }
         });
     }

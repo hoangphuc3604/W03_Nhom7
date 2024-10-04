@@ -22,7 +22,7 @@
             android:id="@+id/txtUsername"/>
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:id="@+id/editUsername"
             android:layout_weight="2"
             android:hint="Enter username"/>
@@ -40,7 +40,7 @@
             android:id="@+id/txtPassword"/>
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:id="@+id/editPassword"
             android:hint="Enter password"
             android:layout_weight = "2"
@@ -59,7 +59,7 @@
             android:id="@+id/txtRetype"/>
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:id="@+id/editRetype"
             android:hint="Retype password"
             android:layout_weight="2"
@@ -80,13 +80,13 @@
             android:layout_weight="1"
             android:hint = "dd/mm/yy"
             android:inputType="date"
-            android:id="@+id/editDate"
+            android:id="@+id/editBirthdate"
             />
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:text="Select"
-            android:id="@+id/btnSelect"/>
+            android:id="@+id/btnBirthdateSelect"/>
     </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
@@ -96,19 +96,19 @@
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/gender"
+        android:id="@+id/optionsGender"
         android:orientation="horizontal"
         android:gravity="center_horizontal">
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:text="Male"
-            android:id="@+id/genderMale"/>
+            android:id="@+id/optionMale"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:text="Female"
-            android:id="@+id/genderFemale"/>
+            android:id="@+id/optionFemale"/>
     </RadioGroup>
     <TextView
         android:layout_width="wrap_content"
@@ -143,13 +143,13 @@
         android:gravity="center_horizontal">
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:text="Reset"
             android:id="@+id/btnReset"/>
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:text="Sign up"
-            android:id="@+id/btnSign"/>
+            android:id="@+id/btnSignUp"/>
     </LinearLayout>
 </LinearLayout>
