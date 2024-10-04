@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     RadioButton male, female;
     RadioGroup gender;
     CheckBox tennis, futbal, others;
-    Button reset, sign;
+    Button reset, sign, select;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,11 +32,12 @@ public class MainActivity extends AppCompatActivity {
         female = findViewById(R.id.genderFemale);
 
         tennis = findViewById(R.id.checkTennis);
-        futbal = findViewById(R.id.checkFusbal);
+        futbal = findViewById(R.id.checkFutbal);
         others = findViewById(R.id.checkOthers);
 
         reset = findViewById(R.id.btnReset);
         sign = findViewById(R.id.btnSign);
+        select = findViewById(R.id.btnSelect);
 
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +52,14 @@ public class MainActivity extends AppCompatActivity {
                 tennis.setChecked(false);
                 futbal.setChecked(false);
                 others.setChecked(false);
+            }
+        });
+
+        select.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DatePickerFragment newFragment = new DatePickerFragment();
+                newFragment.show(getSupportFragmentManager(), "datePicker");
             }
         });
     }

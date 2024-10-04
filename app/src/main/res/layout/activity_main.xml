@@ -6,6 +6,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding= "2dp"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -14,14 +15,16 @@
         android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="Username"
+            android:gravity="center"
             android:ems="5"
             android:id="@+id/txtUsername"/>
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/editUsername"
+            android:layout_weight="2"
             android:hint="Enter username"/>
     </LinearLayout>
     <LinearLayout
@@ -30,15 +33,17 @@
         android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="Password"
+            android:gravity="center"
             android:ems="5"
             android:id="@+id/txtPassword"/>
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/editPassword"
             android:hint="Enter password"
+            android:layout_weight = "2"
             android:inputType="textPassword"/>
     </LinearLayout>
     <LinearLayout
@@ -47,34 +52,34 @@
         android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="Retype"
             android:ems="5"
+            android:gravity="center"
             android:id="@+id/txtRetype"/>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/editRetype"
-            android:hint="Retype password"
-            android:inputType="textPassword"/>
-    </LinearLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Birthdate"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-<!--        <DatePicker-->
-<!--            android:layout_width="300dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:id="@+id/date"-->
-<!--            android:datePickerMode="spinner"-->
-<!--            android:calendarViewShown="false"/>-->
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/editRetype"
+            android:hint="Retype password"
+            android:layout_weight="2"
+            android:inputType="textPassword"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:text="Birthdate" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
             android:layout_weight="1"
+            android:hint = "dd/mm/yy"
+            android:inputType="date"
             android:id="@+id/editDate"
             />
         <Button
@@ -86,7 +91,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gender"/>
+        android:text="Gender"
+        android:paddingLeft="20dp"/>
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -95,12 +101,12 @@
         android:gravity="center_horizontal">
         <RadioButton
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:text="Male"
             android:id="@+id/genderMale"/>
         <RadioButton
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:text="Female"
             android:id="@+id/genderFemale"/>
     </RadioGroup>
@@ -114,19 +120,19 @@
         android:gravity="center_horizontal">
         <CheckBox
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:id="@+id/checkTennis"
             android:text="Tennis"
             android:checked="false"/>
         <CheckBox
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkFusbal"
-            android:text="Fusbal"
+            android:layout_height="48dp"
+            android:id="@+id/checkFutbal"
+            android:text="Futbal"
             android:checked="false"/>
         <CheckBox
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:id="@+id/checkOthers"
             android:text="Others"
             android:checked="false"/>
