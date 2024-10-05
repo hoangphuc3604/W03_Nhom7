@@ -20,7 +20,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 
-public class MainActivity extends AppCompatActivity {
+public class RegisterformActivity extends AppCompatActivity {
     Context context;
     EditText usernameEdit, passwordEdit, retypeEdit, birthdateEdit;
     RadioButton maleOption, femaleOption;
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //Create a DatePickerDialog picker with current date selected
                 DatePickerDialog datePickerDialog = new DatePickerDialog(
-                        MainActivity.this,
+                        RegisterformActivity.this,
                         //Listener/Callback after a birthdateEdit is chosen
                         new DatePickerDialog.OnDateSetListener() {
                             @Override
@@ -148,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
                     hobbies += "Others";
                 }
 
-                Intent myIntentA1A2 = new Intent(MainActivity.this, ResultformActivity.class);
+                Intent myIntentA1A2 = new Intent(RegisterformActivity.this, ResultformActivity.class);
                 Bundle myBundle1 = new Bundle();
 
                 myBundle1.putString("usernameSigned", username);
