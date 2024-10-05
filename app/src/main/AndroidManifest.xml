@@ -13,6 +13,8 @@
         android:theme="@style/Theme.AppCompat.Light"
         tools:targetApi="31">
         <activity
+            android:name=".ResultformActivity" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
