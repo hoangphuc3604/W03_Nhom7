@@ -100,39 +100,45 @@
         android:orientation="horizontal"
         android:gravity="center_horizontal">
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Male"
             android:id="@+id/optionMale"/>
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Female"
             android:id="@+id/optionFemale"/>
     </RadioGroup>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
         android:text="Hobbies"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal">
         <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:id="@+id/checkTennis"
             android:text="Tennis"
             android:checked="false"/>
         <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:id="@+id/checkFutbal"
             android:text="Futbal"
             android:checked="false"/>
         <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:id="@+id/checkOthers"
             android:text="Others"
             android:checked="false"/>
@@ -142,13 +148,15 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal">
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Reset"
             android:id="@+id/btnReset"/>
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Sign up"
             android:id="@+id/btnSignUp"/>
     </LinearLayout>
